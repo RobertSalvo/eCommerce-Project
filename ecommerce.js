@@ -154,7 +154,7 @@ const subtractQuantity = () =>{
 const totalProducts = document.querySelectorAll('.product');
 const productImages = document.querySelectorAll('.single-product-grid img');
 
-if(window.location.pathname === '/html-codes/eCommerce%20project/shop.html'){
+if(window.location.pathname.endsWith('shop.html')){
     const shopPageOne = document.querySelector('.page-one');
     const shopPageTwo = document.querySelector('.page-two');
     const prevButton = document.querySelector('.prev');
@@ -211,7 +211,7 @@ const firstProduct = (index) =>{
     }
 }
 
-if(window.location.pathname ===  '/html-codes/eCommerce%20project/sproduct.html'){
+if(window.location.pathname.endsWith('sproduct.html')){
     const pID = localStorage.getItem('ProductID')
 
     switch(pID){
