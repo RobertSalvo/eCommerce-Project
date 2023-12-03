@@ -1,4 +1,3 @@
-
 const cartButton = document.querySelectorAll('ul button')
 const cartContainer = document.querySelector('.cart-container')
 const table = document.querySelector('table')
@@ -202,13 +201,13 @@ totalProducts.forEach( products =>{
 })
 
 const firstProduct = (index) =>{
-    productImages[0].src = `/images/${index}.jpg`
+    productImages[0].src = `${index}.jpg`
     
     if(index.slice(0,1) === 'n'){
-        productImages[1].src = '/images/n2.jpg'
-        productImages[2].src = '/images/n3.jpg'
-        productImages[3].src = '/images/n4.jpg'
-        productImages[4].src = '/images/n5.jpg'
+        productImages[1].src = 'n2.jpg'
+        productImages[2].src = 'n3.jpg'
+        productImages[3].src = 'n4.jpg'
+        productImages[4].src = 'n5.jpg'
     }
 }
 
