@@ -210,7 +210,7 @@ nav a.current-page{
     color:cadetblue ;
 }
 .shop-now{
-    background-image: url("/images/bstain-removebg-preview.png");
+    background-image: url("bstain-removebg-preview.png");
     background-color: transparent;
     border: none;
     background-size: cover; /* Adjust this property as needed */
@@ -280,7 +280,7 @@ nav a.current-page{
 }
 .call-to-action{
     height: 400px;
-    background: url("/images/b2.jpg");
+    background: url("b2.jpg");
     background-size: cover;
     background-position: center;
     color: white;
@@ -395,7 +395,7 @@ nav a.current-page{
     margin-top: 10px;
 }
 .newsletter{
-    background: url("/images/b14.png");
+    background: url("b14.png");
     background-color: #041e42;
     color: white;
     height: 200px;
@@ -493,7 +493,7 @@ footer{
 
 /* SHOP PAGE */
 .header{
-    background: url("/images/b1.jpg");
+    background: url("b1.jpg");
     height: 40vh;
     background-size: cover;
     background-position: center;
@@ -692,7 +692,7 @@ color: #333;
 
 /*                  BLOG PAGE             */
 .read-more{
-    background: url("/images/b19.jpg");
+    background: url("b19.jpg");
     height: 40vh;
     background-size: cover;
     background-position: center;
@@ -776,7 +776,7 @@ color: #333;
 
 /*        ABOUT PAGE        */
 .know-us{
-    background: url("/images/banner.png");
+    background: url("banner.png");
     height: 40vh;
     background-size: cover;
     background-position: center;
