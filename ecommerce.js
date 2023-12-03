@@ -1,3 +1,4 @@
+
 const cartButton = document.querySelectorAll('ul button')
 const cartContainer = document.querySelector('.cart-container')
 const table = document.querySelector('table')
@@ -5,7 +6,21 @@ const cartCount = document.querySelector('.cart-count')
 const sizeOfProduct = document.querySelector('.select-size')
 const quantityTextField = document.querySelector('.quantity-display');
 let quantity = 1;
-let count = 0 
+let count = 0
+const idArray = []    
+
+cartButton.forEach(button =>{
+    button.addEventListener('click', () =>{
+        if(cartContainer.classList.contains('slideIn')){
+            cartContainer.classList.remove('slideIn')
+            cartContainer.classList.add('slideOut')
+        }
+        else{
+            cartContainer.classList.add('slideIn')
+            cartContainer.classList.remove('slideOut')
+        }
+    })
+})
 
 const generateRandomId = (idArray) =>{
     let num
