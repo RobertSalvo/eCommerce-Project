@@ -1,14 +1,3 @@
-
-/////////////////////// NAVBAR /////////////////
-const currentPage = window.location.href;
-const links = document.querySelectorAll('nav a');
-
-links.forEach(link => {
-    if (link.href === currentPage) {
-        link.classList.add('current-page');
-    }
-});
-
 const cartButton = document.querySelectorAll('ul button')
 const cartContainer = document.querySelector('.cart-container')
 const table = document.querySelector('table')
@@ -88,6 +77,15 @@ const removeItem = (dataId) => {
 }
 document.addEventListener('DOMContentLoaded', () =>{
     storageCount('load')  
+
+    const links = document.querySelectorAll('nav a');
+    
+    links.forEach(link => {
+        if(link.classList.contains('active')){
+            link.classList.add('current-page')
+        }
+    });
+
 })
 
 const storageCount = (operation) =>{
