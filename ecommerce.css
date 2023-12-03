@@ -1,0 +1,942 @@
+html, body{
+    height: 100%;
+    background-color:aliceblue;
+    margin: 0;
+    font-family: "Montserrat";
+}
+.cart-container{
+    width: 600px;
+    position: fixed;
+    right: -40%;
+    height: 606px;
+    z-index: 213;
+    top: 14%;
+}
+.slideIn{
+    animation: slideInRight 0.5s ease forwards;
+}
+.slideOut{
+    animation: slideOut 0.5s ease;
+}
+.cart-content{
+    margin: 10px;
+    background-color: black;
+    border-radius: 15px;
+    width: inherit;
+    height: inherit;
+    overflow-y: scroll;
+}
+th{
+    color: white;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+th:first-child{
+    border-top-left-radius: 15px;
+}
+th:nth-child(4){
+    width: 20%;
+}
+tr:nth-child(n+3) td{
+    padding-top: 30px;
+}
+td{
+    margin-top: 10px;
+    color: white;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+td:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+td > button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-size: 18px;
+}
+td > img{
+    width: 25%;
+    height: 100%;
+    object-fit: contain;
+}
+td > i{
+    margin-top: 5px;
+    font-size: 15px;
+}
+.product-cell{
+    width: 50%;
+}
+@keyframes slideInRight{
+    from{
+        right: -40%;
+    }
+    to{
+        right: 1.5%;
+    }
+}
+@keyframes slideOut{
+    from{
+        right: 1.5%;
+    }
+    to{
+        right: -40%;
+    }
+}
+
+/* HOME PAGE */
+.navbar{
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    z-index: 123;
+    background-color: aliceblue;
+    border-bottom: solid;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    height: inherit;
+    margin-left: 150px;
+}
+.navbar .shop-name{
+    font-family: "Agbalumo";
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    color: purple;
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 400px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    gap: 40px;
+    margin: 0;
+    margin-right: 200px;
+}
+ul button{
+    background-color: transparent;
+    border: none;
+    position: relative;
+}
+.cart-count{
+    position: absolute;
+    bottom: 0;
+    right: 1%;
+    background-color: #3498db;
+    color: #fff;
+    padding: 3px 5px;
+    border-radius: 50%;
+    font-size: 9px;
+    border: 2px solid #fff;
+    visibility: hidden;
+}
+ul img{
+    width: 25px;
+    cursor: pointer;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.4s;
+    padding-bottom: 10px;
+}
+nav a:hover{
+    color: cadetblue;
+}
+nav a.current-page{
+    border-bottom: 4px solid;
+    color: cadetblue;
+}
+.starter{
+    display: flex;
+    align-items: center;
+    height: 638px;
+    position: relative;
+    font-family: "Montserrat";
+    padding-top: 50px;
+}
+.starter img{
+  width: 1000px;
+}
+.starter h1{
+    font-size: 55px;
+    margin: 0;
+}
+.starter h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.starter h3{
+    opacity: 0.3;
+}
+.starter div{
+    width: 600px;
+    text-align: left;
+    margin-left: 100px;
+}
+.featured{
+    background-color: white;
+    padding-bottom: 200px;
+    padding-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    gap: 30px;
+}
+.starter span{
+    color:cadetblue ;
+}
+.shop-now{
+    background-image: url("/images/bstain-removebg-preview.png");
+    background-color: transparent;
+    border: none;
+    background-size: cover; /* Adjust this property as needed */
+    background-position: center center;
+    color: white;
+    width: 270px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 80px;
+    font-size: 21px;
+}
+.featured-img{
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5);;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+}
+.featured-img h1{
+    font-family: "Montserrat";
+    font-size: 17px;
+    padding: 5px 0 5px 0;
+    background-color: blanchedalmond;
+}
+.featured-products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    font-family: "Montserrat";
+}
+.featured-products h1, .featured-products2 h1{
+    font-size: 65px;
+    margin: 0;
+}
+.featured-products h3, .featured-products2 h3, .new-arrivals h3{
+    color: cadetblue;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    gap: 60px;
+    margin-top: 100px;
+}
+.products h2{
+    margin: 0;
+    font-size: 17px;
+}
+.products h3{
+    margin: 5px;
+}
+.product{
+    width: 100%;
+    border-radius: 15px;
+}
+.products-container{
+    position: relative;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);;
+    padding: 15px 15px 20px 15px;
+    border-radius: 15px;
+    cursor: default;
+}
+.products .shopping-cart{
+    width: 25px;
+    position: absolute;
+    right: 10%;
+    bottom: 5%;
+}
+.call-to-action{
+    height: 400px;
+    background: url("/images/b2.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat";
+}
+.call-to-action h1{
+    font-size: 55px;
+    margin: 0
+}
+.call-to-action button{
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 15px 50px 15px 50px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+    transition: background-color 0.4s ease;
+}
+.call-to-action button:hover{
+    background-color: #088178;
+    color: white;
+}
+.call-to-action span{
+    color: red;
+}
+.new-arrivals{
+    font-family: "Montserrat";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+.new-arrivals h1{
+    font-size: 65px;
+    margin: 0;
+}
+.cta-banners{
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banners-container{
+    display: grid;
+    width: 1400px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    grid-gap: 50px;
+    font-family: "Montserrat";
+}
+.banners-container img{
+    width: 100%;
+    height: 100%;
+}
+.banners-container .grid-template-column-3{
+    width: 100%;
+    height: 100%;
+    grid-column: span 3;
+    position: relative;
+    color: white;
+}
+.banners-container .grid-template-column-2{
+    width: 100%;
+    height: 230px;
+    grid-column: span 2;
+    position: relative;
+}
+.captions, .captions-template-2{
+    position: absolute;
+    top: 20%;
+    left: 7%;
+}
+.captions h1, .captions h2{
+    margin-bottom: 10px;
+    margin-top: 0;    
+}
+.captions h1{
+    font-size: 40px;
+}
+.captions h2{
+    font-size: 23px;
+}
+.captions h3{
+    font-size: 17px;
+}
+.captions button{
+    padding: 10px 20px 10px 20px;
+    font-family: "Montserrat";
+    background-color: transparent;
+    color: white;
+    border: solid;
+    border-width: 1px;
+    border-color: white;
+    cursor: pointer;
+    transition: background-color 0.4s, color 0.4s;
+}
+.captions button:hover{
+    background-color: white;
+    color: black;
+}
+.captions-template-2 h1{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 2px;
+}
+.captions-template-2 h3{
+    color: red;
+    margin-top: 10px;
+}
+.newsletter{
+    background: url("/images/b14.png");
+    background-color: #041e42;
+    color: white;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Montserrat";
+    margin-top: 100px;
+}
+.newsletter-captions{
+    margin-left: 110px;
+}
+.newsletter-captions h1{
+    color: white;
+    font-size: 35px;
+}
+.newsletter-captions h3{
+    color: cadetblue;
+}
+.new-arrivals h3{
+    color: cadetblue;
+}
+.newsletter-captions span{
+    color: orange;
+}
+.newsletter .sign-up{
+    margin-right: 110px;
+    display: flex;
+    align-items: center;
+}
+.sign-up input{
+    width: 450px;
+    padding: 20px 0 20px 10px;
+    font-size: 18px;
+    font-family: "Montserrat";
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.sign-up input:focus{
+    outline: none;
+}
+.sign-up button{
+    padding: 20px 30px 20px 30px;
+    font-size: 18px;
+    font-family: "Montserrat";
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color:  #088178;
+    color: white;
+    cursor: pointer;
+}
+footer{
+    font-family: "Montserrat";
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 6%;
+    height: 600px;
+    position: relative;
+}
+.contact img{
+    width: 200px;
+}
+.contact h3, .about h3, .about a, .account h3, .account a, .install-app h3:first-child{
+    margin-bottom: 40px;
+}
+.about, .account{
+    display: flex;
+    flex-direction: column;
+}
+.about a, .account a{
+    text-decoration: none;
+    color: black;
+    font-size: 18.72px;
+}
+.about a:hover, .account a:hover{
+    text-decoration: underline;
+}
+.install-app .images{
+    display: flex;
+    gap: 10px;
+}
+.images img{
+    border: 1px solid;
+}
+.copywright{
+    color: cadetblue;
+    position: absolute;
+    margin-top: 20px;
+    bottom: 0;
+}
+
+
+/* SHOP PAGE */
+.header{
+    background: url("/images/b1.jpg");
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline-start: 14px;
+    padding-top: 50px;
+}
+.header h1{
+    margin: 0;
+    font-size: 55px;
+}
+.pagination{
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+}
+.pagination button{
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid;
+    background-color:#041e42;
+    padding: 10px 25px 10px 25px; 
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-family: "Montserrat";
+}
+.products-container-shop{
+    position: relative;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);;
+    padding: 15px 15px 20px 15px;
+    border-radius: 15px;
+    cursor: default;
+}
+.products-container-shop:hover, .products-container:hover{
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.3);
+}
+.shop-products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.shop-products h2{
+    margin: 0;
+    font-size: 17px;
+}
+.shop-products h3{
+    margin: 5px;
+}
+.product{
+    width: 100%;
+    border-radius: 15px;
+}
+.page-one, .page-two{
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    gap: 60px;
+    margin-top: 100px; 
+}
+.prev:disabled{
+    background-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+}
+.next:disabled{
+    background-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+}
+.shop-products .shopping-cart{
+    width: 25px;
+    position: absolute;
+    right: 10%;
+    bottom: 5%;
+}
+.hide{
+    display: none;
+}
+
+
+
+/*                   SPRODUCT PAGE        */
+.single-product-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 150px;
+}
+.single-product-grid{
+    width: 500px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 10px;
+
+}
+.single-product-grid img{
+    width: 100%;
+}
+.single-product-grid img:first-child{
+    grid-row: span 3;
+    grid-column: span 4;
+}
+.single-product-details i{ 
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.single-product-details{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    font-family: "Montserrat";
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.single-product-details label{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.select-size {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    width: 150px;
+    margin-top: 12px;
+}
+.select-size option {
+background-color: #fff;
+color: #333;
+}
+.product-quantity-button{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.quantity-display{
+    outline: none;
+    font-size: inherit;
+    cursor: default;
+    width: 50px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid;
+}
+.product-quantity-button button{
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.product-quantity-button button:active{
+    transform: scale(0.95);
+}
+.add-to-cart{
+    margin-top: 20px;
+    padding: 13px;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    width: 160px;
+    background-color: #3498db;
+    color: #fff;
+    border: 2px solid #2980b9;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    font-family: "Montserrat";
+}
+.add-to-cart:hover{
+    background-color: #2980b9;
+}
+.add-to-cart:active{
+    transform: scale(0.95);
+}
+.single-product-details p{
+    text-align: justify;
+    margin: 0;
+}
+.featured-products2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    font-family: "Montserrat";
+}
+
+
+/*                  BLOG PAGE             */
+.read-more{
+    background: url("/images/b19.jpg");
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline-start: 14px;
+    margin-bottom: 50px;
+    padding-top: 50px;
+}
+.read-more h1{
+    margin: 0;
+    font-size: 55px;
+}
+.blogs{
+    display: flex;
+    flex-direction: column;
+}
+.blog-container{
+    display: flex;
+    width: 100%;
+    height: 45vh;
+    justify-content: center;
+    margin-top: 150px;
+}
+.blog-container div:first-child{
+    width: 75vh;
+    position: relative;
+}
+.blog-container div:first-child h1{
+    position: absolute;
+    top: -25%;
+    font-size: 100px;
+    z-index: 0;
+    margin: 0;
+    color: cadetblue;
+}
+.blog-container div:first-child img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 2;
+    top: 0;
+}
+.blog-container div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70vh;
+    margin-left: 50px;
+}
+.blog-container h2{
+    font-size: 27px;
+    margin-bottom: 0;
+}
+.blog-container div:nth-child(2) p:first-of-type{
+    color: cadetblue;
+    margin-top: 23px;
+    margin-bottom: 23px;
+    font-size: 17px;
+}
+.blog-container div:nth-child(2) p:nth-of-type(2){
+    margin: 0;
+    font-size: 17px;
+    position: relative;
+}
+.blog-container div:nth-child(2) p:nth-of-type(2)::after{
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 38%;
+    height: 2px;
+    width: 60px;
+    background-color: #000;
+}
+
+
+/*        ABOUT PAGE        */
+.know-us{
+    background: url("/images/banner.png");
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline-start: 14px;
+    margin-bottom: 100px;
+    padding-top: 50px;
+}
+.know-us h1{
+    margin: 0;
+    font-size: 55px;
+}
+.who-are-we{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.who-are-we div:first-child{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    width: 1360px;
+    height: 500px;
+}
+.who-are-we img{
+    width: 100%;
+    object-fit: cover;
+}  
+.who-are-we div:nth-child(2){
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 653px;
+}
+.who-are-we div:nth-child(2) h1{
+    font-size: 70px;
+    margin: 0;
+}
+.who-are-we div:nth-child(2) p, abbr{
+    color: cadetblue;
+    text-align: justify;
+    font-size: 20px;
+}
+.scrolling-text-container{
+    overflow: hidden;
+    margin-top: 20px;
+    white-space: nowrap;
+    width: 100%;
+    background-color:#041e42;
+    text-align: center;
+    height: 28px;
+}
+.scrolling-text{
+    animation: scrollingText 10s linear infinite;
+    margin: 0;
+}
+@keyframes scrollingText{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.download{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.download h1:first-child{
+    font-size: 55px;
+}
+.download video{
+    border-radius: 20px;
+    margin-bottom: 150px;
+}
+.map{
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    margin-bottom: 150px;
+}
+.loc-description h1{
+    width: 550px;
+    font-size: 30px;
+}
+.loc-description div{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 40px;
+}
+.loc-description div img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+.google-map{
+    width: 700px;
+    height: inherit;
+    object-fit: cover;
+}
+.reviews{
+    display: flex;
+    justify-content: center;
+}
+.reviews-container{
+    display: flex;
+    justify-content: center;
+    border: 1px solid;
+    width: 94%;
+    padding: 60px 0px 60px 0px;
+}
+.reviews-container > div:first-child > h1{
+    font-size: 30px;
+    margin-top: 0;
+    width: 700px;
+}
+.reviews-container > div:first-child > form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.reviews-container > div:first-child > form > input{
+    padding: 8px 0px 8px 8px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+.reviews-container > div:first-child > form > input:nth-of-type(4){
+    padding-bottom: 120px;
+}
+.reviews-container > div:first-child > form > button{
+    width: 100px;
+    height: 37px;
+    border-radius: 5px;
+    background-color:#088178;
+    color: white;
+    font-family: "Montserrat";
+    cursor: pointer;
+}
+.review-people-container{
+    margin-left: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+}
+.review-people-container > .review-people{
+    display: flex;
+}
+.review-people-container > .review-people > img{
+    object-fit: contain;
+    margin-right: 15px;
+}
+.review-people-container > .review-people > div > h3, .review-people-container > .review-people > div > p{
+    margin: 3px;
+}

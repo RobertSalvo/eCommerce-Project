@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ecommerce.css">
+    <head>
+        <title>sproduct</title>
+    </head>
+
+    <body>
+        <div class="navbar">
+            <img src="/images/logo-removebg-preview.png" alt="logo" class="logo">
+        <nav>
+            <ul>
+                <a href="eCommerce.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <button>
+                    <img src="/images/shopping-bag.png" alt="shopping-bag">
+                    <div class="cart-count"></div>
+                </button>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="cart-container">
+        <div class="cart-content">
+            <table>
+                    <tr>    
+                        <th class="remove-item">REMOVE</th>
+                        <th class="product-cell">PRODUCT</th>
+                        <th>AMOUNT</th>
+                        <th>SIZE</th>
+                        <th>PRICE</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    <div class="single-product-container">
+        <div class="single-product-grid">
+            <img src="/images/f1.jpg" alt="shirt">
+            <img src="/images/f2.jpg" alt="shirt">
+            <img src="/images/f3.jpg" alt="shirt">
+            <img src="/images/f4.jpg" alt="shirt">
+            <img src="/images/f5.jpg" alt="shirt">
+        </div>
+
+        <div class="single-product-details">
+            <h1>Men's Fashion T Shirt</h1>
+            <i>$139.00</i>
+            <label for="selectSize">Select Size:</label>
+            <select class="select-size" name="Select Size">
+                <option value="XS">Extra Small</option>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option>
+            </select>
+            
+            <label for="quantity">Amount:</label>
+            <div class="product-quantity-button">
+                <button class="subtract" onclick="subtractQuantity()"> - </button>
+                <input type="text" value="1" class="quantity-display" readonly>
+                <button class="add" onclick="addQuantity()"> + </button>
+            </div>
+            
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+
+            <h2>Product Details</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+
+    <section class="newsletter">
+        <div class="newsletter-captions">
+            <h1>Sign Up For Newsletters</h1>
+            <h3>Get E-mail updates about our latest shop and <span>special offers</span></h3>
+        </div>
+        <form class="sign-up">
+            <input type="text" placeholder="Your email address">
+            <button>Sign Up</button>
+        </form>
+    </section>
+    <footer>
+        <div class="contact">
+            <img src="/images/logo-removebg-preview.png" alt="logo">
+            <h3>Contact</h3>
+            <h3>Address: Hillside Lapasan, Cagayan de Oro City</h3>
+            <h3>Phone: +63 945-768-9811</h3>
+            <h3>Hours: 10:00Am - 6:00PM, Mon-Sat</h3>
+            <h3>Follow us</h3>
+        </div>
+
+        <div class="about">
+            <h3>About Us</h3>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="account">
+            <h3>My Account</h3>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track my Order</a>
+        </div>
+
+        <div class="install-app">
+            <h3>Install App</h3>
+            <h3>From App Store or Google Play</h3>
+            <div class="images">
+                <img src="/images/app.jpg" alt="app">
+                <img src="/images/play.jpg" alt="play">
+            </div>
+            <h3>Secured Payment Gateways</h3>
+            <img src="/images/pay.png" alt="pay">
+        </div>
+
+        <h4 class="copywright">© 2023, Tech etc - HTML CSS Ecommerce Website </h4>
+    </footer>
+
+    <script src="ecommerce.js"></script>
+    </body>
+</html>
